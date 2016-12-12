@@ -12,4 +12,4 @@ Sphero robot packages for ROS Kinetic.
 
 	`roslaunch sphero_gazebo keyboard_teleop.launch`
 
-> **NOTE: ** Don't forget to run the simulation pressing the play button. If don't, the robot won't move.
+> **NOTE:** Don't forget to run the simulation pressing the play button. If don't, the robot won't move.
