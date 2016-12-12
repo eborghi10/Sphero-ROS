@@ -1,0 +1,882 @@
+<sdf version="1.4">
+  <world name="default">
+    <physics type="ode">
+      <gravity>0 0 -9.81</gravity>
+      <ode>
+        <solver>
+          <type>quick</type>
+          <iters>20</iters>
+          <sor>1.0</sor>
+        </solver>
+        <constraints>
+          <cfm>0.0</cfm>
+          <erp>0.2</erp>
+          <contact_max_correcting_vel>100.0</contact_max_correcting_vel>
+          <contact_surface_layer>0.0</contact_surface_layer>
+        </constraints>
+      </ode>
+      <real_time_update_rate>1000</real_time_update_rate>
+      <max_step_size>0.001</max_step_size>
+    </physics>
+    <light name="light1" type="directional">
+      <cast_shadows>true</cast_shadows>
+      <pose>-6 0 6 0 0.6 0</pose>
+      <diffuse>0.0 0.0 0.0 1.0</diffuse>
+      <specular>0.1 0.1 0.1 1</specular>
+      <attenuation>
+        <range>30</range>
+        <constant>0.9</constant>
+        <linear>0.01</linear>
+        <quadratic>0.001</quadratic>
+      </attenuation>
+      <direction>0.2 0.0 -1.0</direction>
+    </light>
+    
+    <include>
+      <uri>model://sun</uri>
+    </include>
+    
+    <include>
+      <uri>model://desert</uri>
+      <pose>25.0 -30 -34 0 0 0.0</pose>
+    </include>
+
+    <gui fullscreen="0">
+      <camera name="user_camera">
+        <pose>1.152670 -0.041479 3.496780 0.000000 1.123640 3.132190</pose>
+        <view_controller>orbit</view_controller>
+      </camera>
+    </gui>
+  <state world_name="default">
+    <sim_time>0 0</sim_time>
+    <real_time>0 0</real_time>
+    <wall_time>0 0</wall_time>
+    <model name="drc_practice_4x4x20_10">
+      <pose frame="">0.287459 -1.65024 0.099548 -1e-06 -0 1.59485</pose>
+      <link name="lumber_4x4x20::link">
+        <pose frame="">0.287459 -1.65024 0.099548 -1e-06 -0 1.59485</pose>
+        <velocity>0 0 0 0 0 0</velocity>
+        <acceleration>0 0 0 0 -0 0</acceleration>
+        <wrench>0 0 0 0 -0 0</wrench>
+      </link>
+    </model><model name="ground_plane">
+      <pose frame="">0 0 0 0 -0 0</pose>
+      <link name="link">
+        <pose frame="">0 0 0 0 -0 0</pose>
+        <velocity>0 0 0 0 0 0</velocity>
+        <acceleration>0 0 0 0 -0 0</acceleration>
+        <wrench>0 0 0 0 -0 0</wrench>
+      </link>
+    </model><model name="drc_practice_4x4x20_3">
+      <pose frame="">0.315581 0.035823 0.099548 -1e-06 -0 -1.61947</pose>
+      <link name="lumber_4x4x20::link">
+        <pose frame="">0.315581 0.035823 0.099548 -1e-06 -0 -1.61947</pose>
+        <velocity>0 0 0 0 0 0</velocity>
+        <acceleration>0 0 0 0 -0 0</acceleration>
+        <wrench>0 0 0 0 -0 0</wrench>
+      </link>
+    </model><model name="drc_practice_4x4x20_1">
+      <pose frame="">-0.390015 -1.45903 0.099548 -1e-06 0 0</pose>
+      <link name="lumber_4x4x20::link">
+        <pose frame="">-0.390015 -1.45903 0.099548 -1e-06 0 0</pose>
+        <velocity>0 0 0 0 0 0</velocity>
+        <acceleration>0 0 0 0 -0 0</acceleration>
+        <wrench>0 0 0 0 -0 0</wrench>
+      </link>
+    </model><model name="drc_practice_4x4x20_8">
+      <pose frame="">-0.652132 -1.14382 0.099548 -1e-06 1.05879e-22 -1.55009</pose>
+      <link name="lumber_4x4x20::link">
+        <pose frame="">-0.652132 -1.14382 0.099548 -1e-06 1.05879e-22 -1.55009</pose>
+        <velocity>0 0 0 0 0 0</velocity>
+        <acceleration>0 0 0 0 -0 0</acceleration>
+        <wrench>0 0 0 0 -0 0</wrench>
+      </link>
+    </model><model name="drc_practice_4x4x20_9">
+      <pose frame="">0.2907 -1.12778 0.099548 -1e-06 -0 -1.58067</pose>
+      <link name="lumber_4x4x20::link">
+        <pose frame="">0.2907 -1.12778 0.099548 -1e-06 -0 -1.58067</pose>
+        <velocity>0 0 0 0 0 0</velocity>
+        <acceleration>0 0 0 0 -0 0</acceleration>
+        <wrench>0 0 0 0 -0 0</wrench>
+      </link>
+    </model><model name="drc_practice_4x4x20_4">
+      <pose frame="">0.018767 0.246838 0.099548 -1e-06 2.58494e-26 -0.000303</pose>
+      <link name="lumber_4x4x20::link">
+        <pose frame="">0.018767 0.246838 0.099548 -1e-06 2.58494e-26 -0.000303</pose>
+        <velocity>0 0 0 0 0 0</velocity>
+        <acceleration>0 0 0 0 -0 0</acceleration>
+        <wrench>0 0 0 0 -0 0</wrench>
+      </link>
+    </model><model name="drc_practice_4x4x20_5">
+      <pose frame="">-0.490747 0.239631 0.099548 -1e-06 8.27181e-25 0.01284</pose>
+      <link name="lumber_4x4x20::link">
+        <pose frame="">-0.490747 0.239631 0.099548 -1e-06 8.27181e-25 0.01284</pose>
+        <velocity>0 0 0 0 0 0</velocity>
+        <acceleration>0 0 0 0 -0 0</acceleration>
+        <wrench>0 0 0 0 -0 0</wrench>
+      </link>
+    </model><model name="drc_practice_base_4x8_0">
+      <pose frame="">-0.146396 -0.903118 0.029782 0 -0 0</pose>
+      <link name="drc_practice_base::platform">
+        <pose frame="">-0.146396 -0.903118 0.042482 0 -0 0</pose>
+        <velocity>0 0 0 0 0 0</velocity>
+        <acceleration>0 0 0 0 -0 0</acceleration>
+        <wrench>0 0 0 0 -0 0</wrench>
+      </link>
+    </model><model name="drc_practice_4x4x20_7">
+      <pose frame="">-0.674757 -0.6303 0.099548 -1e-06 -0 -1.5083</pose>
+      <link name="lumber_4x4x20::link">
+        <pose frame="">-0.674757 -0.6303 0.099548 -1e-06 -0 -1.5083</pose>
+        <velocity>0 0 0 0 0 0</velocity>
+        <acceleration>0 0 0 0 -0 0</acceleration>
+        <wrench>0 0 0 0 -0 0</wrench>
+      </link>
+    </model><model name="drc_practice_4x4x20_0">
+      <pose frame="">0.014141 -0.802557 0.099548 -1e-06 5.16988e-26 0.000506</pose>
+      <link name="lumber_4x4x20::link">
+        <pose frame="">0.014141 -0.802557 0.099548 -1e-06 5.16988e-26 0.000506</pose>
+        <velocity>0 0 0 0 0 0</velocity>
+        <acceleration>0 0 0 0 -0 0</acceleration>
+        <wrench>0 0 0 0 -0 0</wrench>
+      </link>
+    </model><model name="drc_practice_4x4x20_6">
+      <pose frame="">-0.684784 -0.095033 0.099548 -1e-06 -0 -1.55908</pose>
+      <link name="lumber_4x4x20::link">
+        <pose frame="">-0.684784 -0.095033 0.099548 -1e-06 -0 -1.55908</pose>
+        <velocity>0 0 0 0 0 0</velocity>
+        <acceleration>0 0 0 0 -0 0</acceleration>
+        <wrench>0 0 0 0 -0 0</wrench>
+      </link>
+    </model><model name="drc_practice_4x4x20_2">
+      <pose frame="">0.304742 -0.47945 0.099548 -1e-06 -0 1.54526</pose>
+      <link name="lumber_4x4x20::link">
+        <pose frame="">0.304742 -0.47945 0.099548 -1e-06 -0 1.54526</pose>
+        <velocity>0 0 0 0 0 0</velocity>
+        <acceleration>0 0 0 0 -0 0</acceleration>
+        <wrench>0 0 0 0 -0 0</wrench>
+      </link>
+    </model><model name="drc_practice_4x4x20_11">
+      <pose frame="">-0.660348 -1.76781 0.099548 -1.5708 5.55112e-17 -1.54794</pose>
+      <link name="lumber_4x4x20::link">
+        <pose frame="">-0.660348 -1.76781 0.099548 -1.5708 5.55112e-17 -1.54794</pose>
+        <velocity>0 0 0 0 0 0</velocity>
+        <acceleration>0 0 0 0 -0 0</acceleration>
+        <wrench>0 0 0 0 -0 0</wrench>
+      </link>
+    </model></state><model name="ground_plane">
+    <static>1</static>
+    <link name="link">
+      <collision name="collision">
+        <geometry>
+          <plane>
+            <normal>0 0 1</normal>
+            <size>100 100</size>
+          </plane>
+        </geometry>
+        <surface>
+          <friction>
+            <ode>
+              <mu>100</mu>
+              <mu2>50</mu2>
+            </ode>
+          </friction>
+          <contact>
+            <ode />
+          </contact>
+          <bounce />
+        </surface>
+        <max_contacts>10</max_contacts>
+      </collision>
+      <visual name="visual">
+        <cast_shadows>0</cast_shadows>
+        <geometry>
+          <plane>
+            <normal>0 0 1</normal>
+            <size>100 100</size>
+          </plane>
+        </geometry>
+        <material>
+          <script>
+            <uri>file://media/materials/scripts/gazebo.material</uri>
+            <name>Gazebo/Grey</name>
+          </script>
+        </material>
+      </visual>
+      <self_collide>0</self_collide>
+      <kinematic>0</kinematic>
+      <gravity>1</gravity>
+    </link>
+  </model><model name="drc_practice_4x4x20_6">
+    <pose frame="">-0.379173 -0.117474 0.5 0 -0 0</pose>
+    <link name="lumber_4x4x20::link">
+      <inertial>
+        <mass>1.37</mass>
+        <inertia>
+          <ixx>0.0018</ixx>
+          <ixy>0</ixy>
+          <ixz>0</ixz>
+          <iyy>0.0303</iyy>
+          <iyz>0</iyz>
+          <izz>0.0303</izz>
+        </inertia>
+      </inertial>
+      <collision name="collision">
+        <geometry>
+          <box>
+            <size>0.508 0.0888 0.0888</size>
+          </box>
+        </geometry>
+        <surface>
+          <bounce>
+            <restitution_coefficient>0</restitution_coefficient>
+            <threshold>2</threshold>
+          </bounce>
+          <friction>
+            <ode>
+              <mu>10</mu>
+              <mu2>10</mu2>
+            </ode>
+          </friction>
+          <contact>
+            <ode>
+              <soft_cfm>0.001</soft_cfm>
+              <kp>100000</kp>
+              <kd>1000</kd>
+            </ode>
+          </contact>
+        </surface>
+        <max_contacts>10</max_contacts>
+      </collision>
+      <visual name="visual">
+        <geometry>
+          <mesh>
+            <uri>model://drc_practice_4x4x20/meshes/4x4x20.dae</uri>
+          </mesh>
+        </geometry>
+      </visual>
+      <pose frame="">0 0 0 0 -0 0</pose>
+      <self_collide>0</self_collide>
+      <kinematic>0</kinematic>
+      <gravity>1</gravity>
+    </link>
+  </model><model name="drc_practice_4x4x20_3">
+    <pose frame="">-0.0241879 -0.374324 0.5 0 -0 0</pose>
+    <link name="lumber_4x4x20::link">
+      <inertial>
+        <mass>1.37</mass>
+        <inertia>
+          <ixx>0.0018</ixx>
+          <ixy>0</ixy>
+          <ixz>0</ixz>
+          <iyy>0.0303</iyy>
+          <iyz>0</iyz>
+          <izz>0.0303</izz>
+        </inertia>
+      </inertial>
+      <collision name="collision">
+        <geometry>
+          <box>
+            <size>0.508 0.0888 0.0888</size>
+          </box>
+        </geometry>
+        <surface>
+          <bounce>
+            <restitution_coefficient>0</restitution_coefficient>
+            <threshold>2</threshold>
+          </bounce>
+          <friction>
+            <ode>
+              <mu>10</mu>
+              <mu2>10</mu2>
+            </ode>
+          </friction>
+          <contact>
+            <ode>
+              <soft_cfm>0.001</soft_cfm>
+              <kp>100000</kp>
+              <kd>1000</kd>
+            </ode>
+          </contact>
+        </surface>
+        <max_contacts>10</max_contacts>
+      </collision>
+      <visual name="visual">
+        <geometry>
+          <mesh>
+            <uri>model://drc_practice_4x4x20/meshes/4x4x20.dae</uri>
+          </mesh>
+        </geometry>
+      </visual>
+      <pose frame="">0 0 0 0 -0 0</pose>
+      <self_collide>0</self_collide>
+      <kinematic>0</kinematic>
+      <gravity>1</gravity>
+    </link>
+  </model><model name="drc_practice_4x4x20_8">
+    <pose frame="">-0.297825 -0.984174 0.5 0 -0 0</pose>
+    <link name="lumber_4x4x20::link">
+      <inertial>
+        <mass>1.37</mass>
+        <inertia>
+          <ixx>0.0018</ixx>
+          <ixy>0</ixy>
+          <ixz>0</ixz>
+          <iyy>0.0303</iyy>
+          <iyz>0</iyz>
+          <izz>0.0303</izz>
+        </inertia>
+      </inertial>
+      <collision name="collision">
+        <geometry>
+          <box>
+            <size>0.508 0.0888 0.0888</size>
+          </box>
+        </geometry>
+        <surface>
+          <bounce>
+            <restitution_coefficient>0</restitution_coefficient>
+            <threshold>2</threshold>
+          </bounce>
+          <friction>
+            <ode>
+              <mu>10</mu>
+              <mu2>10</mu2>
+            </ode>
+          </friction>
+          <contact>
+            <ode>
+              <soft_cfm>0.001</soft_cfm>
+              <kp>100000</kp>
+              <kd>1000</kd>
+            </ode>
+          </contact>
+        </surface>
+        <max_contacts>10</max_contacts>
+      </collision>
+      <visual name="visual">
+        <geometry>
+          <mesh>
+            <uri>model://drc_practice_4x4x20/meshes/4x4x20.dae</uri>
+          </mesh>
+        </geometry>
+      </visual>
+      <pose frame="">0 0 0 0 -0 0</pose>
+      <self_collide>0</self_collide>
+      <kinematic>0</kinematic>
+      <gravity>1</gravity>
+    </link>
+  </model><model name="drc_practice_4x4x20_9">
+    <pose frame="">0.00315763 -0.912371 0.5 0 -0 0</pose>
+    <link name="lumber_4x4x20::link">
+      <inertial>
+        <mass>1.37</mass>
+        <inertia>
+          <ixx>0.0018</ixx>
+          <ixy>0</ixy>
+          <ixz>0</ixz>
+          <iyy>0.0303</iyy>
+          <iyz>0</iyz>
+          <izz>0.0303</izz>
+        </inertia>
+      </inertial>
+      <collision name="collision">
+        <geometry>
+          <box>
+            <size>0.508 0.0888 0.0888</size>
+          </box>
+        </geometry>
+        <surface>
+          <bounce>
+            <restitution_coefficient>0</restitution_coefficient>
+            <threshold>2</threshold>
+          </bounce>
+          <friction>
+            <ode>
+              <mu>10</mu>
+              <mu2>10</mu2>
+            </ode>
+          </friction>
+          <contact>
+            <ode>
+              <soft_cfm>0.001</soft_cfm>
+              <kp>100000</kp>
+              <kd>1000</kd>
+            </ode>
+          </contact>
+        </surface>
+        <max_contacts>10</max_contacts>
+      </collision>
+      <visual name="visual">
+        <geometry>
+          <mesh>
+            <uri>model://drc_practice_4x4x20/meshes/4x4x20.dae</uri>
+          </mesh>
+        </geometry>
+      </visual>
+      <pose frame="">0 0 0 0 -0 0</pose>
+      <self_collide>0</self_collide>
+      <kinematic>0</kinematic>
+      <gravity>1</gravity>
+    </link>
+  </model><model name="drc_practice_4x4x20_2">
+    <pose frame="">0.0743806 -0.810004 0.5 0 -0 0</pose>
+    <link name="lumber_4x4x20::link">
+      <inertial>
+        <mass>1.37</mass>
+        <inertia>
+          <ixx>0.0018</ixx>
+          <ixy>0</ixy>
+          <ixz>0</ixz>
+          <iyy>0.0303</iyy>
+          <iyz>0</iyz>
+          <izz>0.0303</izz>
+        </inertia>
+      </inertial>
+      <collision name="collision">
+        <geometry>
+          <box>
+            <size>0.508 0.0888 0.0888</size>
+          </box>
+        </geometry>
+        <surface>
+          <bounce>
+            <restitution_coefficient>0</restitution_coefficient>
+            <threshold>2</threshold>
+          </bounce>
+          <friction>
+            <ode>
+              <mu>10</mu>
+              <mu2>10</mu2>
+            </ode>
+          </friction>
+          <contact>
+            <ode>
+              <soft_cfm>0.001</soft_cfm>
+              <kp>100000</kp>
+              <kd>1000</kd>
+            </ode>
+          </contact>
+        </surface>
+        <max_contacts>10</max_contacts>
+      </collision>
+      <visual name="visual">
+        <geometry>
+          <mesh>
+            <uri>model://drc_practice_4x4x20/meshes/4x4x20.dae</uri>
+          </mesh>
+        </geometry>
+      </visual>
+      <pose frame="">0 0 0 0 -0 0</pose>
+      <self_collide>0</self_collide>
+      <kinematic>0</kinematic>
+      <gravity>1</gravity>
+    </link>
+  </model><model name="drc_practice_4x4x20_4">
+    <pose frame="">-0.126001 0.166368 0.5 0 -0 0</pose>
+    <link name="lumber_4x4x20::link">
+      <inertial>
+        <mass>1.37</mass>
+        <inertia>
+          <ixx>0.0018</ixx>
+          <ixy>0</ixy>
+          <ixz>0</ixz>
+          <iyy>0.0303</iyy>
+          <iyz>0</iyz>
+          <izz>0.0303</izz>
+        </inertia>
+      </inertial>
+      <collision name="collision">
+        <geometry>
+          <box>
+            <size>0.508 0.0888 0.0888</size>
+          </box>
+        </geometry>
+        <surface>
+          <bounce>
+            <restitution_coefficient>0</restitution_coefficient>
+            <threshold>2</threshold>
+          </bounce>
+          <friction>
+            <ode>
+              <mu>10</mu>
+              <mu2>10</mu2>
+            </ode>
+          </friction>
+          <contact>
+            <ode>
+              <soft_cfm>0.001</soft_cfm>
+              <kp>100000</kp>
+              <kd>1000</kd>
+            </ode>
+          </contact>
+        </surface>
+        <max_contacts>10</max_contacts>
+      </collision>
+      <visual name="visual">
+        <geometry>
+          <mesh>
+            <uri>model://drc_practice_4x4x20/meshes/4x4x20.dae</uri>
+          </mesh>
+        </geometry>
+      </visual>
+      <pose frame="">0 0 0 0 -0 0</pose>
+      <self_collide>0</self_collide>
+      <kinematic>0</kinematic>
+      <gravity>1</gravity>
+    </link>
+  </model><model name="drc_practice_4x4x20_5">
+    <pose frame="">-0.479267 -0.0450364 0.5 0 -0 0</pose>
+    <link name="lumber_4x4x20::link">
+      <inertial>
+        <mass>1.37</mass>
+        <inertia>
+          <ixx>0.0018</ixx>
+          <ixy>0</ixy>
+          <ixz>0</ixz>
+          <iyy>0.0303</iyy>
+          <iyz>0</iyz>
+          <izz>0.0303</izz>
+        </inertia>
+      </inertial>
+      <collision name="collision">
+        <geometry>
+          <box>
+            <size>0.508 0.0888 0.0888</size>
+          </box>
+        </geometry>
+        <surface>
+          <bounce>
+            <restitution_coefficient>0</restitution_coefficient>
+            <threshold>2</threshold>
+          </bounce>
+          <friction>
+            <ode>
+              <mu>10</mu>
+              <mu2>10</mu2>
+            </ode>
+          </friction>
+          <contact>
+            <ode>
+              <soft_cfm>0.001</soft_cfm>
+              <kp>100000</kp>
+              <kd>1000</kd>
+            </ode>
+          </contact>
+        </surface>
+        <max_contacts>10</max_contacts>
+      </collision>
+      <visual name="visual">
+        <geometry>
+          <mesh>
+            <uri>model://drc_practice_4x4x20/meshes/4x4x20.dae</uri>
+          </mesh>
+        </geometry>
+      </visual>
+      <pose frame="">0 0 0 0 -0 0</pose>
+      <self_collide>0</self_collide>
+      <kinematic>0</kinematic>
+      <gravity>1</gravity>
+    </link>
+  </model><model name="drc_practice_base_4x8_0">
+    <pose frame="">-1.16335 -0.903118 0.5 0 -0 0</pose>
+    <static>1</static>
+    <link name="drc_practice_base::platform">
+      <collision name="collision">
+        <geometry>
+          <box>
+            <size>1.2192 2.4384 0.0254</size>
+          </box>
+        </geometry>
+        <surface>
+          <friction>
+            <ode>
+              <mu>100</mu>
+              <mu2>50</mu2>
+            </ode>
+          </friction>
+          <contact>
+            <ode />
+          </contact>
+          <bounce />
+        </surface>
+        <max_contacts>10</max_contacts>
+      </collision>
+      <visual name="visual">
+        <geometry>
+          <mesh>
+            <uri>model://drc_practice_base_4x8/meshes/4x8ftbase.dae</uri>
+          </mesh>
+        </geometry>
+      </visual>
+      <pose frame="">0 0 0.0127 0 -0 0</pose>
+      <self_collide>0</self_collide>
+      <kinematic>0</kinematic>
+      <gravity>1</gravity>
+    </link>
+  </model><model name="drc_practice_4x4x20_7">
+    <pose frame="">-0.408318 -0.434567 0.5 0 -0 0</pose>
+    <link name="lumber_4x4x20::link">
+      <inertial>
+        <mass>1.37</mass>
+        <inertia>
+          <ixx>0.0018</ixx>
+          <ixy>0</ixy>
+          <ixz>0</ixz>
+          <iyy>0.0303</iyy>
+          <iyz>0</iyz>
+          <izz>0.0303</izz>
+        </inertia>
+      </inertial>
+      <collision name="collision">
+        <geometry>
+          <box>
+            <size>0.508 0.0888 0.0888</size>
+          </box>
+        </geometry>
+        <surface>
+          <bounce>
+            <restitution_coefficient>0</restitution_coefficient>
+            <threshold>2</threshold>
+          </bounce>
+          <friction>
+            <ode>
+              <mu>10</mu>
+              <mu2>10</mu2>
+            </ode>
+          </friction>
+          <contact>
+            <ode>
+              <soft_cfm>0.001</soft_cfm>
+              <kp>100000</kp>
+              <kd>1000</kd>
+            </ode>
+          </contact>
+        </surface>
+        <max_contacts>10</max_contacts>
+      </collision>
+      <visual name="visual">
+        <geometry>
+          <mesh>
+            <uri>model://drc_practice_4x4x20/meshes/4x4x20.dae</uri>
+          </mesh>
+        </geometry>
+      </visual>
+      <pose frame="">0 0 0 0 -0 0</pose>
+      <self_collide>0</self_collide>
+      <kinematic>0</kinematic>
+      <gravity>1</gravity>
+    </link>
+  </model><model name="drc_practice_4x4x20_0">
+    <pose frame="">0.0760791 -1.25571 0.5 0 -0 0</pose>
+    <link name="lumber_4x4x20::link">
+      <inertial>
+        <mass>1.37</mass>
+        <inertia>
+          <ixx>0.0018</ixx>
+          <ixy>0</ixy>
+          <ixz>0</ixz>
+          <iyy>0.0303</iyy>
+          <iyz>0</iyz>
+          <izz>0.0303</izz>
+        </inertia>
+      </inertial>
+      <collision name="collision">
+        <geometry>
+          <box>
+            <size>0.508 0.0888 0.0888</size>
+          </box>
+        </geometry>
+        <surface>
+          <bounce>
+            <restitution_coefficient>0</restitution_coefficient>
+            <threshold>2</threshold>
+          </bounce>
+          <friction>
+            <ode>
+              <mu>10</mu>
+              <mu2>10</mu2>
+            </ode>
+          </friction>
+          <contact>
+            <ode>
+              <soft_cfm>0.001</soft_cfm>
+              <kp>100000</kp>
+              <kd>1000</kd>
+            </ode>
+          </contact>
+        </surface>
+        <max_contacts>10</max_contacts>
+      </collision>
+      <visual name="visual">
+        <geometry>
+          <mesh>
+            <uri>model://drc_practice_4x4x20/meshes/4x4x20.dae</uri>
+          </mesh>
+        </geometry>
+      </visual>
+      <pose frame="">0 0 0 0 -0 0</pose>
+      <self_collide>0</self_collide>
+      <kinematic>0</kinematic>
+      <gravity>1</gravity>
+    </link>
+  </model><model name="drc_practice_4x4x20_1">
+    <pose frame="">0.0204909 -1.62326 0.5 0 -0 0</pose>
+    <link name="lumber_4x4x20::link">
+      <inertial>
+        <mass>1.37</mass>
+        <inertia>
+          <ixx>0.0018</ixx>
+          <ixy>0</ixy>
+          <ixz>0</ixz>
+          <iyy>0.0303</iyy>
+          <iyz>0</iyz>
+          <izz>0.0303</izz>
+        </inertia>
+      </inertial>
+      <collision name="collision">
+        <geometry>
+          <box>
+            <size>0.508 0.0888 0.0888</size>
+          </box>
+        </geometry>
+        <surface>
+          <bounce>
+            <restitution_coefficient>0</restitution_coefficient>
+            <threshold>2</threshold>
+          </bounce>
+          <friction>
+            <ode>
+              <mu>10</mu>
+              <mu2>10</mu2>
+            </ode>
+          </friction>
+          <contact>
+            <ode>
+              <soft_cfm>0.001</soft_cfm>
+              <kp>100000</kp>
+              <kd>1000</kd>
+            </ode>
+          </contact>
+        </surface>
+        <max_contacts>10</max_contacts>
+      </collision>
+      <visual name="visual">
+        <geometry>
+          <mesh>
+            <uri>model://drc_practice_4x4x20/meshes/4x4x20.dae</uri>
+          </mesh>
+        </geometry>
+      </visual>
+      <pose frame="">0 0 0 0 -0 0</pose>
+      <self_collide>0</self_collide>
+      <kinematic>0</kinematic>
+      <gravity>1</gravity>
+    </link>
+  </model><model name="drc_practice_4x4x20_10">
+    <pose frame="">-0.0814603 -1.57441 0.5 0 -0 0</pose>
+    <link name="lumber_4x4x20::link">
+      <inertial>
+        <mass>1.37</mass>
+        <inertia>
+          <ixx>0.0018</ixx>
+          <ixy>0</ixy>
+          <ixz>0</ixz>
+          <iyy>0.0303</iyy>
+          <iyz>0</iyz>
+          <izz>0.0303</izz>
+        </inertia>
+      </inertial>
+      <collision name="collision">
+        <geometry>
+          <box>
+            <size>0.508 0.0888 0.0888</size>
+          </box>
+        </geometry>
+        <surface>
+          <bounce>
+            <restitution_coefficient>0</restitution_coefficient>
+            <threshold>2</threshold>
+          </bounce>
+          <friction>
+            <ode>
+              <mu>10</mu>
+              <mu2>10</mu2>
+            </ode>
+          </friction>
+          <contact>
+            <ode>
+              <soft_cfm>0.001</soft_cfm>
+              <kp>100000</kp>
+              <kd>1000</kd>
+            </ode>
+          </contact>
+        </surface>
+        <max_contacts>10</max_contacts>
+      </collision>
+      <visual name="visual">
+        <geometry>
+          <mesh>
+            <uri>model://drc_practice_4x4x20/meshes/4x4x20.dae</uri>
+          </mesh>
+        </geometry>
+      </visual>
+      <pose frame="">0 0 0 0 -0 0</pose>
+      <self_collide>0</self_collide>
+      <kinematic>0</kinematic>
+      <gravity>1</gravity>
+    </link>
+  </model><model name="drc_practice_4x4x20_11">
+    <pose frame="">-0.544356 -1.91243 0.5 0 -0 0</pose>
+    <link name="lumber_4x4x20::link">
+      <inertial>
+        <mass>1.37</mass>
+        <inertia>
+          <ixx>0.0018</ixx>
+          <ixy>0</ixy>
+          <ixz>0</ixz>
+          <iyy>0.0303</iyy>
+          <iyz>0</iyz>
+          <izz>0.0303</izz>
+        </inertia>
+      </inertial>
+      <collision name="collision">
+        <geometry>
+          <box>
+            <size>0.508 0.0888 0.0888</size>
+          </box>
+        </geometry>
+        <surface>
+          <bounce>
+            <restitution_coefficient>0</restitution_coefficient>
+            <threshold>2</threshold>
+          </bounce>
+          <friction>
+            <ode>
+              <mu>10</mu>
+              <mu2>10</mu2>
+            </ode>
+          </friction>
+          <contact>
+            <ode>
+              <soft_cfm>0.001</soft_cfm>
+              <kp>100000</kp>
+              <kd>1000</kd>
+            </ode>
+          </contact>
+        </surface>
+        <max_contacts>10</max_contacts>
+      </collision>
+      <visual name="visual">
+        <geometry>
+          <mesh>
+            <uri>model://drc_practice_4x4x20/meshes/4x4x20.dae</uri>
+          </mesh>
+        </geometry>
+      </visual>
+      <pose frame="">0 0 0 0 -0 0</pose>
+      <self_collide>0</self_collide>
+      <kinematic>0</kinematic>
+      <gravity>1</gravity>
+    </link>
+  </model></world>
+</sdf>

@@ -1,0 +1,20 @@
+<launch>
+    <!-- SPHERO ACTION NODE -->
+    <node pkg = "my_sph_actions"
+          type = "action_server.py"
+          name = "sphero_action_node_v2"
+          output = "screen"
+    ></node>
+    <!-- SPHERO ACTION TOPIC AND SERVICES -->
+    <node pkg = "my_sph_services"
+          type = "service_server.py"
+          name = "sphero_service_node_v2"
+          output = "screen"
+    ></node>
+    <!-- SPHERO MAIN PROGRAM -->
+    <node pkg = "my_sph_main"
+          type = "main.py"
+          name = "sphero_main_node_v2"
+          output = "screen"
+    ></node>
+</launch>

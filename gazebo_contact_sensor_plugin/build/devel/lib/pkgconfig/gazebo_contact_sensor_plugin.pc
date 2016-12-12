@@ -1,0 +1,8 @@
+prefix=/home/emiliano/catkin_ws/src/sphero/gazebo_contact_sensor_plugin/build/devel
+
+Name: gazebo_contact_sensor_plugin
+Description: Description of gazebo_contact_sensor_plugin
+Version: 0.0.0
+Cflags: -I/home/emiliano/catkin_ws/src/sphero/gazebo_contact_sensor_plugin/include
+Libs: -L/home/emiliano/catkin_ws/src/sphero/gazebo_contact_sensor_plugin/build/devel/lib 
+Requires: gazebo_plugins gazebo_ros roscpp sphero_node

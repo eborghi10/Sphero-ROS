@@ -1,0 +1,8 @@
+prefix=/usr/local
+
+Name: gazebo_contact_sensor_plugin
+Description: Description of gazebo_contact_sensor_plugin
+Version: 0.0.0
+Cflags: -I/usr/local/include
+Libs: -L/usr/local/lib 
+Requires: gazebo_plugins gazebo_ros roscpp sphero_node

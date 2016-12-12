@@ -1,0 +1,2 @@
+- setup-file:
+    local-name: /home/emiliano/catkin_ws/src/sphero/sphero_gazebo/build/devel/setup.sh

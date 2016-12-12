@@ -1,0 +1,8 @@
+prefix=/home/emiliano/catkin_ws/src/sphero/sphero_gazebo/build/devel
+
+Name: sphero_gazebo
+Description: Description of sphero_gazebo
+Version: 0.0.0
+Cflags: -I/home/emiliano/catkin_ws/src/sphero/sphero_gazebo/include
+Libs: -L/home/emiliano/catkin_ws/src/sphero/sphero_gazebo/build/devel/lib -lgazebo_sphero_controller
+Requires: control_toolbox gazebo_ros robot_controllers robot_controllers_interface
