@@ -139,7 +139,7 @@ include_directories(
 
 link_directories(
   /opt/ros/latest/lib
-  /opt/ros/kinetic/lib
+  /opt/ros/melodic/lib
   ${GAZEBO_LIBRARY_DIRS}
 )
 

@@ -5,7 +5,7 @@
   <arg name="z" default="0.10" />
 
   <!-- URDF and TF support -->
-  <param name="robot_description" command="$(find xacro)/xacro.py $(find sphero_description)/robots/sphero.gazebo.xacro" />
+  <param name="robot_description" command="$(find xacro)/xacro $(find sphero_description)/robots/sphero.gazebo.xacro" />
   <node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher" >
     <param name="publish_frequency" value="10.0"/>
   </node>
