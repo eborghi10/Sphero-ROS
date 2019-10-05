@@ -50,11 +50,13 @@
   <build_depend>gazebo_msgs</build_depend>
   <build_depend>geometry_msgs</build_depend>
   <build_depend>sensor_msgs</build_depend>
+  <build_depend>sphero_node</build_depend>
 
   <run_depend>actionlib</run_depend>
   <run_depend>control_toolbox</run_depend>
   <run_depend>depth_image_proc</run_depend>
   <run_depend>sphero_description</run_depend>
+  <run_depend>gazebo_plugins</run_depend>
   <run_depend>gazebo_ros</run_depend>
   <run_depend>gazebo_msgs</run_depend>
   <run_depend>geometry_msgs</run_depend>
@@ -63,6 +65,7 @@
   <run_depend>robot_controllers</run_depend>
   <run_depend>robot_controllers_interface</run_depend>
   <run_depend>trajectory_msgs</run_depend>
+  <run_depend>sphero_node</run_depend>
   
   <run_depend>xacro</run_depend>
 
@@ -70,6 +73,7 @@
   <!-- The export tag contains other, unspecified, tags -->
   <export>
     <!-- Other tools can request additional information be placed here -->
-
+    <gazebo_ros gazebo_model_path="${prefix}/models"/>
+    <gazebo_ros gazebo_media_path="${prefix}/worlds"/>
   </export>
 </package>

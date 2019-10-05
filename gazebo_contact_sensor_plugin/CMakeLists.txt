@@ -35,11 +35,11 @@ include_directories( ${catkin_INCLUDE_DIRS}
                      ${SDFormat_INCLUDE_DIRS}
 )
 
-
-#list(APPEND CMAKE_CXX_FLAGS "${GAZEBO_CXX_FLAGS}")
 set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} ${GAZEBO_CXX_FLAGS}")
 
 add_library(${PROJECT_NAME} src/ContactPlugin.cpp)
+# http://wiki.ros.org/ROS/Tutorials/DefiningCustomMessages#Dependencies
+add_dependencies(${PROJECT_NAME} ${catkin_EXPORTED_TARGETS})
 
 ## Specify libraries to link a library or executable target against
 target_link_libraries( ${PROJECT_NAME} ${catkin_LIBRARIES} ${GAZEBO_LIBRARIES} )
