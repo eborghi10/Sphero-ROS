@@ -1,2 +1,0 @@
-- setup-file:
-    local-name: /home/emiliano/catkin_ws/src/sphero/gazebo_contact_sensor_plugin/build/devel/setup.sh

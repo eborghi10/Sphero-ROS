@@ -1,8 +1,0 @@
-prefix=/usr/local
-
-Name: sphero_gazebo
-Description: Description of sphero_gazebo
-Version: 0.0.0
-Cflags: -I/usr/local/include
-Libs: -L/usr/local/lib -lgazebo_sphero_controller
-Requires: control_toolbox gazebo_ros robot_controllers robot_controllers_interface

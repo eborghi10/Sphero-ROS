@@ -1,1 +1,0 @@
-/usr/bin/c++  -fPIC -std=c++11   -shared -Wl,-soname,libgtest_main.so -o libgtest_main.so CMakeFiles/gtest_main.dir/src/gtest_main.cc.o  -L/home/emiliano/catkin_ws/src/sphero/sphero_gazebo/build/gtest/src -lpthread libgtest.so -lpthread -Wl,-rpath,/home/emiliano/catkin_ws/src/sphero/sphero_gazebo/build/gtest/src:/home/emiliano/catkin_ws/src/sphero/sphero_gazebo/build/gtest 
