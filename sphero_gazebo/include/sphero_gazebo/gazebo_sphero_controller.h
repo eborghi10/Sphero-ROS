@@ -19,6 +19,7 @@
 #include <map>
 
 // Gazebo
+#include <gazebo/gazebo.hh>
 #include <gazebo/common/common.hh>
 #include <gazebo/physics/physics.hh>
 #include <gazebo_plugins/gazebo_ros_utils.h>
