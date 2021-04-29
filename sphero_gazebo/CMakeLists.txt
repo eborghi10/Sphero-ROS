@@ -9,6 +9,7 @@ find_package(catkin REQUIRED COMPONENTS
   xacro
   angles
   control_toolbox
+  gazebo_plugins
   gazebo_ros
   robot_controllers
   robot_controllers_interface
@@ -37,17 +38,17 @@ find_package(gazebo REQUIRED)
 ## DEPENDS: system dependencies of this project that dependent projects also need
 
 catkin_package(
-INCLUDE_DIRS include
+  INCLUDE_DIRS
+    include
   CATKIN_DEPENDS
     control_toolbox
+    gazebo_plugins
     gazebo_ros
     robot_controllers
     robot_controllers_interface
     sphero_node
-  DEPENDS
-    gazebo_ros
   LIBRARIES
-	gazebo_sphero_controller
+	  gazebo_sphero_controller
 )
 
 ###########
@@ -68,17 +69,16 @@ include_directories(
 
 link_directories(
   /opt/ros/latest/lib
-  /opt/ros/kinetic/lib
+  /opt/ros/${ROS_DISTRO}/lib
   ${GAZEBO_LIBRARY_DIRS}
 )
 
 
 ## Declare a C++ library
 add_library(gazebo_sphero_controller src/gazebo_sphero_controller.cpp)
-target_link_libraries(
-	gazebo_sphero_controller 
-	gazebo_ros_utils 
-	${GAZEBO_LIBRARIES} 
-	${catkin_LIBRARIES} 
+add_dependencies(gazebo_sphero_controller ${catkin_EXPORTED_TARGETS} ${${PROJECT_NAME}_EXPORTED_TARGETS})
+target_link_libraries(gazebo_sphero_controller
+	${GAZEBO_LIBRARIES}
+	${catkin_LIBRARIES}
 	${Boost_LIBRARIES}
 )
